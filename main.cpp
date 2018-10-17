@@ -8,6 +8,7 @@ using namespace std;
 
 int correctNumber, playerGuess, randNumber, wrongNumber, guessedNumbers[5] = { }, points, numberOfGuesses;
 bool guessLoop;
+i=0
 
 int main()
 {
@@ -23,11 +24,14 @@ int main()
 		if (playerGuess > randNumber)
 		{
 			cout << "Sorry, you guessed too high, try again!" << endl;
+			guessedNumbers [i]=playerGuess;
+			i++;
 			guessLoop = true;
 		}
 		else if (playerGuess < randNumber)
 		{
 			cout << "Sorry, you guessed too low, try again" << endl;
+			guessedNumbers [i]=playerGuess;
 			guessLoop = true;
 		}
 		else if (playerGuess = randNumber)
