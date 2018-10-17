@@ -32,6 +32,7 @@ int main()
 		{
 			cout << "Sorry, you guessed too low, try again" << endl;
 			guessedNumbers [i]=playerGuess;
+			i++
 			guessLoop = true;
 		}
 		else if (playerGuess = randNumber)
