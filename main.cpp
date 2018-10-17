@@ -6,7 +6,7 @@ Todo:
 #include <ctime>
 using namespace std;
 
-int correctNumber, playerGuess, randNumber, wrongNumber, guessedNumbers[5] = { }, points;
+int correctNumber, playerGuess, randNumber, wrongNumber, guessedNumbers[5] = { }, points, numberOfGuesses;
 bool guessLoop;
 
 int main()
@@ -19,19 +19,20 @@ int main()
 	while (guessLoop == true){
 		cout << "Your guess: ";
 		cin >> playerGuess;
-		if (playerGuess > randNumber);
+		guessedNumbers []=playerGuess
+		if (playerGuess > randNumber)
 		{
-			cout << "Sorry, you guessed too high, try again!";
-			guessLoop == true;
+			cout << "Sorry, you guessed too high, try again!" << endl;
+			guessLoop = true;
 		}
-		else if (playerGuess < randNumber);
+		else if (playerGuess < randNumber)
 		{
-			cout << "Sorry, you guessed too low, try again";
-			guessLoop == true;
+			cout << "Sorry, you guessed too low, try again" << endl;
+			guessLoop = true;
 		}
-		else if (playerGuess = randNumber);
+		else if (playerGuess = randNumber)
 		{
-			cout << "Congratulations, you guessed right!";
+			cout << "Congratulations, you guessed right!" << endl;
 			guessLoop = false;
 
 		}	
