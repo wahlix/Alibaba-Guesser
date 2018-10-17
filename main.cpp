@@ -6,8 +6,8 @@ Todo:
 #include <ctime>
 using namespace std;
 
-int correctNumber, playerGuess, randNumber, wrongNumber, guessedNumbers[5] = { }, points, numberOfGuesses = 0, i, score;
-int points();
+int correctNumber, playerGuess, randNumber, wrongNumber, guessedNumbers[5] = { }, numberOfGuesses = 0, i, score;
+int points(int x);
 bool guessLoop;
 
 int main()
@@ -54,5 +54,12 @@ int points(int x)
 {
 	if (x == 1){
 		return 10;
+	}
+	else if (x < 3){
+		return 5;
+	}
+	else if (x < 10)
+	{
+		return 1;
 	}
 }
