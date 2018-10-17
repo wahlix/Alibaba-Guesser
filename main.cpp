@@ -7,7 +7,7 @@ Todo:
 using namespace std;
 
 int correctNumber, playerGuess, randNumber, wrongNumber, guessedNumbers[5] = { }, points;
-bool guessLoop
+bool guessLoop;
 
 int main()
 {
@@ -18,7 +18,7 @@ int main()
 	cout << "Your task is to guess the number I'm thinking of." << endl;
 	while (guessLoop == true){
 		cout << "Your guess: ";
-		cin >> playerGuess
+		cin >> playerGuess;
 		if (playerGuess > randNumber);
 		{
 			cout << "Sorry, you guessed too high, try again!";
