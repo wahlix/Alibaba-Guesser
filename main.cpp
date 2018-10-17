@@ -8,7 +8,7 @@ using namespace std;
 
 int correctNumber, playerGuess, randNumber, wrongNumber, guessedNumbers[5] = { }, points, numberOfGuesses;
 bool guessLoop;
-i=0
+i=0;
 
 int main()
 {
