@@ -1,12 +1,13 @@
 /*Alibaba Guesser by Rickard Wahlander - NSArg18
-v 0.0.4
+v 0.1.3
 Todo:
 */
 #include <iostream>
 #include <ctime>
 using namespace std;
 
-int correctNumber, playerGuess, randNumber, wrongNumber, guessedNumbers[5] = { }, points, numberOfGuesses, i=0;
+int correctNumber, playerGuess, randNumber, wrongNumber, guessedNumbers[5] = { }, points, numberOfGuesses = 0, i, score;
+int points();
 bool guessLoop;
 
 int main()
@@ -19,27 +20,27 @@ int main()
 	while (guessLoop == true){
 		cout << "Your guess: ";
 		cin >> playerGuess;
+		numberOfGuesses ++;
 		guessedNumbers [i]=playerGuess;
 		if (playerGuess > randNumber)
 		{
 			cout << "Sorry, you guessed too high, try again!" << endl;
 			guessedNumbers [i]=playerGuess;
-			i++;
 			guessLoop = true;
 		}
 		else if (playerGuess < randNumber)
 		{
 			cout << "Sorry, you guessed too low, try again" << endl;
 			guessedNumbers [i]=playerGuess;
-			i++;
 			guessLoop = true;
 		}
 		else if (playerGuess == randNumber)
 		{
 			cout << "Congratulations, you guessed right!" << endl;
 			guessedNumbers [i]=playerGuess;
-			i++;
+			score = points(numberOfGuesses);
 			guessLoop = false;
+			cout << "You scored" << score << " points." << endl;
 
 		}	
 	}
@@ -47,4 +48,11 @@ int main()
 		
 		
 	return 0;
+}
+
+int points(int x)
+{
+	if (x == 1){
+		return 10;
+	}
 }
