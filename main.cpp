@@ -12,7 +12,8 @@ bool guessLoop;
 
 int main()
 {
-	randNumber = 5;
+	srand((int)time(0));
+	randNumber = rand() % 50 + 1;
 	guessLoop = true;
 	cout << "Welcome to Alibaba Guesser!" << endl;
 	cout << "I'm thinking of a number between 1 and 50" << endl;
@@ -58,8 +59,7 @@ int points(int x)
 	else if (x < 3){
 		return 5;
 	}
-	else if (x < 10)
-	{
+	else if (x < 10){
 		return 1;
 	}
 }
