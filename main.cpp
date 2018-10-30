@@ -1,5 +1,5 @@
 /*Alibaba Guesser by Rickard Wahlander - NSArg18
-v 0.2
+v 0.2.5
 Todo: Continue with All/Nothing
 */
 #include <iostream>
@@ -10,10 +10,12 @@ int correctNumber, playerGuess, randNumber, wrongNumber, guessedNumbers[5] = { }
 int points(int x);
 bool guessLoop;
 
+
 int main()
 {
 	srand((int)time(0));
-	randNumber = rand() % 50 + 1;
+	//randNumber = rand() % 50 + 1;
+	randNumber = 4;
 	guessLoop = true;
 	cout << "Welcome to Alibaba Guesser!" << endl;
 	cout << "I'm thinking of a number between 1 and 50" << endl;
@@ -43,9 +45,10 @@ int main()
 			guessLoop = false;
 			cout << "You scored " << score << " points." << endl;
 		}	
-		if (score => 1){
-			cout << "Do you want to double your score?";
-			AllOrNothing();
+		if (score >= 1)
+		{
+			cout << "Do you want to double your score?" << endl;
+			return 0;
 		} 
 	}
 	
@@ -56,6 +59,7 @@ int main()
 
 	int points(int x)
 	{
+		cout << x;
 		if (x == 1){
 			return 10;
 		}
@@ -65,13 +69,11 @@ int main()
 		else if (x < 10){
 			return 1;
 		}
+	}
+	int AllOrNothing(int y)
+	{
+		
+	}
 
-}
 
-
-int AllOrNothing()
-{
-	cout << "You have chosen to play All or Nothing";
-
-}
 
